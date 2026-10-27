@@ -1,0 +1,58 @@
+// A garden: the second scenario of the 2024 report, a simple layout of plants in a garden.
+// Every line is a command that could be typed in the console. Open it with  load "garden.mcad",
+// or render it without a window:  java -jar minicad.jar examples/garden.mcad --svg garden.svg
+
+// The plot, the lawn, and two gravel paths that cross it
+new rectangle (400,260) (780,500) fill #f2e8cf stroke #a98467       // obj0
+new rectangle (400,260) (720,440) fill #a7c957 stroke none           // obj1
+new rectangle (400,260) (720,36) fill #e9d8a6 stroke none            // obj2
+new rectangle (400,260) (36,440) fill #e9d8a6 stroke none            // obj3
+grp obj0 obj1 obj2 obj3                                              // grp0: the ground
+
+// A fountain where the paths meet
+new circle (44) (400,260) fill #e9d8a6 stroke #a98467                // obj4
+new circle (26) (400,260) fill #8ecae6 stroke #219ebc                // obj5
+grp obj4 obj5                                                        // grp1
+
+// A tree seen from above, copied four times: an orchard, a group of groups
+new circle (34) (110,100) fill #6a994e stroke #386641                // obj6: the canopy
+new circle (14) (100,90) fill #8ab17d stroke none                    // obj7: the light on it
+grp obj6 obj7                                                        // grp2: one tree
+copy grp2 (100,0)                                                    // grp3
+copy grp2 (200,0)                                                    // grp4
+copy grp2 (50,85)                                                    // grp5
+copy grp2 (150,85)                                                   // grp6
+grp grp2 grp3 grp4 grp5 grp6                                         // grp7: the orchard
+
+// A pond with a stone rim and three water lilies
+new circle (72) (590,140) fill #ced4da stroke none                   // obj16
+new circle (60) (590,140) fill #8ecae6 stroke #219ebc                // obj17
+new circle (10) (560,115) fill #6a994e stroke none                   // obj18
+copy obj18 (55,45)                                                   // obj19
+copy obj18 (48,-12)                                                  // obj20
+scale obj20 0.7
+grp obj16 obj17 obj18 obj19 obj20                                    // grp8
+
+// Two flower beds; the second is a copy of the first, recoloured
+new rectangle (210,330) (290,52) fill #dda15e stroke #bc6c25         // obj21: the soil
+new circle (11) (95,330) fill #f28482 stroke #ffffff                 // obj22
+copy obj22 (46,0)                                                    // obj23
+copy obj22 (92,0)                                                    // obj24
+copy obj22 (138,0)                                                   // obj25
+copy obj22 (184,0)                                                   // obj26
+copy obj22 (230,0)                                                   // obj27
+color obj23 obj25 obj27 fill #f6bd60
+grp obj21 obj22 obj23 obj24 obj25 obj26 obj27                        // grp9
+copy grp9 (0,95)                                                     // grp10
+color obj29 obj31 obj33 fill #cdb4db
+
+// A bench facing the pond, a bird bath, and shrubs along the hedge
+new rectangle (590,318) (130,26) fill #bc6c25 stroke #7f5539         // obj35
+new circle (16) (600,385) fill #ced4da stroke #6c757d                // obj36
+new circle (24) (470,440) fill #386641 stroke none                   // obj37
+copy obj37 (85,0)                                                    // obj38
+copy obj37 (170,0)                                                   // obj39
+copy obj37 (255,0)                                                   // obj40
+scale obj38 0.8
+scale obj40 0.8
+grp obj37 obj38 obj39 obj40                                          // grp11: the hedge
