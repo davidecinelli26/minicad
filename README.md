@@ -14,7 +14,7 @@ The point of the project is design: every pattern in it solves a problem the pro
 
 ## Author
 
-[Davide Cinelli](https://github.com/davidecinelli26). This started as my project for *Ingegneria del Software*, University of Calabria, A.Y. 2023/2024. This repository is a rewrite of it. It keeps the same command language and the same core patterns, fixes the bugs, and adds what the original report listed as future work. [What changed](#what-changed-since-the-2024-version) is at the end.
+[Davide Cinelli](https://github.com/davidecinelli26). This started as my project for the *Ingegneria del Software* course, University of Calabria, A.Y. 2023/2024. This repository is a rewrite of it. It keeps the same command language and the same core patterns, fixes the bugs, and adds what the original report listed as future work. [What changed](#what-changed-since-the-2024-version) is at the end.
 
 ## Try it
 
